@@ -11,3 +11,4 @@ var tamanhoFrase = $("#tamanho-frase");
 
 // A função text, quando passado parâmetros, insere elementos dentro da tag
 tamanhoFrase.text(numeroPalavras);
+
