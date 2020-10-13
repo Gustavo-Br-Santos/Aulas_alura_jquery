@@ -23,6 +23,7 @@ function inicializaCronometro(){
 			// onde é possível adicionar atributos as nossas tags selecionadas do HTML.
 			if(tempoRestante < 1){
 				campo.attr("disabled", true);
+				campo.addClass("campo-digitacao-desativado"); // Adiciona uma classe
 				clearInterval(cronometroID);
 			}
 

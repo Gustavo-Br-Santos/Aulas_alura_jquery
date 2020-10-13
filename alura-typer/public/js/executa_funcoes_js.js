@@ -5,6 +5,7 @@ $(document).ready(function(){
 	atualizaTamanhoFrase();
 	inicializaContadores();
 	inicializaCronometro();
+	verifica_digitacao_usuario();
 	$("#botao-reiniciar").click(reiniciaJogo)
 });
 
