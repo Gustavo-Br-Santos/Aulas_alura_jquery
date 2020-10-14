@@ -22,12 +22,16 @@ function inicializaCronometro(){
 			// de teste do usuario. Podemos fazer isso com o método Jquery chamado attr,
 			// onde é possível adicionar atributos as nossas tags selecionadas do HTML.
 			if(tempoRestante < 1){
-				campo.attr("disabled", true);
-				campo.addClass("campo-digitacao-desativado"); // Adiciona uma classe
 				clearInterval(cronometroID);
+				finalizaJogo();
 			}
 
 		}, 1000); // 1000 ms = 1s
 	});
 }
-	
+
+function finalizaJogo(){
+	campo.attr("disabled", true);
+	campo.addClass("campo-digitacao-desativado"); // Adiciona uma classe
+	inserePlacar() // Assim que acabar o tempo, chama a função de inserir os dados no placar
+}	
