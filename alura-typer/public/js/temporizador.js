@@ -9,8 +9,9 @@ var tempoInicial = $("#tempo-digitacao").text()
 // é que o one só irá escutar o evento uma vez, enquanto o on irá
 // acionar o evento quantas vezes for necessário.
 function inicializaCronometro(){
-	var tempoRestante = $("#tempo-digitacao").text()
+	
 	campo.one("focus", function(){
+		var tempoRestante = $("#tempo-digitacao").text()
 		// O setInterval tem a função de ficar executando
 		// determinada função em um determinado período de 
 		// tempo em ms. Além disso, vamos colocála dentro de uma var
@@ -35,3 +36,9 @@ function finalizaJogo(){
 	campo.addClass("campo-digitacao-desativado"); // Adiciona uma classe
 	inserePlacar() // Assim que acabar o tempo, chama a função de inserir os dados no placar
 }	
+
+
+function atualizaTempoInicial(tempo){
+	tempoInicial = tempo
+	$("#tempo-digitacao").text(tempo);
+}

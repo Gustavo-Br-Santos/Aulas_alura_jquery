@@ -6,8 +6,16 @@ function inserePlacar(){
 	linha.find(".botao-remover").click(removeLinha);
 
 	corpoTabela.prepend(linha);
+	$(".placar").slideDown(500);  // Exibe o placar assim que acaba o jogo
+	scrollPlacar();
 }
 
+function scrollPlacar(){
+	var posicaoPlacar = $(".placar").offset().top;
+	$("body").animate({
+		scrollTop: posicaoPlacar+"px"
+	},1000);
+};
 
 function novaLinha(usuario, numeroPalavras){
 	// Função responsável por criar novas linhas na tabela.

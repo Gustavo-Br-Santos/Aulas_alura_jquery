@@ -2,10 +2,11 @@
 var campo = $(".campo-digitacao");
 
 function verifica_digitacao_usuario(){
-	// Guarda na variavel frase o texto da frase
-	var frase = $(".frase").text();
-	
+		
 	campo.on("input", function(){
+		// Guarda na variavel frase o texto da frase
+		var frase = $(".frase").text();
+
 		var digitado = campo.val();
 		// A variavel comparavel ira dividir a frase apenas 
 		// até o trecho que o usuario já digitou. É possível
